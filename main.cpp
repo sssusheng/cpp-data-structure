@@ -2,8 +2,25 @@
 #include "SeqList.h"
 #include "LinkList.h"
 #include "DbLinkList.h"
+#include "SeqStack.h"
 
 int main()
+{
+	SeqStack<int> seqstackobj(10);
+	seqstackobj.Push(150);
+	seqstackobj.Push(200);
+	seqstackobj.Push(300);
+	seqstackobj.Push(400);
+	seqstackobj.DisPlayList();
+
+	int eval = 0;
+	seqstackobj.Pop(eval);
+	seqstackobj.Pop(eval);
+	seqstackobj.DisPlayList();
+}
+
+
+int test_dblinklist_main()
 {
 	DbLinkList<int> dblinkobj;
 	dblinkobj.ListDelete(1);
@@ -20,7 +37,7 @@ int main()
 	dblinkobj.Empty();
 	dblinkobj.ReverseList();
 	dblinkobj.DisplayList();
-	
+	return 1;
 }
 
 
