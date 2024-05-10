@@ -1,8 +1,30 @@
 #include <iostream>
 #include "SeqList.h"
 #include "LinkList.h"
+#include "DbLinkList.h"
 
 int main()
+{
+	DbLinkList<int> dblinkobj;
+	dblinkobj.ListDelete(1);
+	dblinkobj.ListInsert(1, 10);
+	dblinkobj.ListInsert(2, 20);
+	dblinkobj.ListInsert(2, 30);
+	dblinkobj.ListDelete(1);
+	dblinkobj.DisplayList();
+
+	int temp;
+	dblinkobj.GetElem(1, temp);
+	dblinkobj.LocateElem(30);
+	dblinkobj.ListLength();
+	dblinkobj.Empty();
+	dblinkobj.ReverseList();
+	dblinkobj.DisplayList();
+	
+}
+
+
+int test_linklist_main()
 {
 	LinkList<int> linkobj;
 	linkobj.ListDelete(1);
@@ -18,6 +40,7 @@ int main()
 	linkobj.ListLength();
 	linkobj.ReverseList();
 	linkobj.DisplayList();
+	return 1;
 }
 
 

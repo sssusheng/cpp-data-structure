@@ -18,6 +18,7 @@ public:
 	LinkList();
 	~LinkList();
 
+public:
 	bool ListInsert(int i, const T &e);
 	bool ListDelete(int i);
 	bool GetElem(int i, T& e);
