@@ -3,8 +3,25 @@
 #include "LinkList.h"
 #include "DbLinkList.h"
 #include "SeqStack.h"
+#include "LinkStack.h"
+
 
 int main()
+{
+	LinkStack<int> linkstackobj;
+	linkstackobj.Push(12);
+	linkstackobj.Push(24);
+	linkstackobj.Push(48);
+	linkstackobj.Push(100);
+	linkstackobj.DisplayList();
+
+	int temp = 0;
+	linkstackobj.Pop(temp);
+	linkstackobj.DisplayList();
+}
+
+
+int test_seqstack_main()
 {
 	SeqStack<int> seqstackobj(10);
 	seqstackobj.Push(150);
@@ -17,6 +34,7 @@ int main()
 	seqstackobj.Pop(eval);
 	seqstackobj.Pop(eval);
 	seqstackobj.DisPlayList();
+	return 1;
 }
 
 
